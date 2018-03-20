@@ -1,0 +1,34 @@
+{
+  "name": "respawn",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A simple packaged nodejs app that launches a child process and automatically re-spawns it if it exits. No fancy logging or interface. Just start it and forget about it.",
+  "main": "respawn.js",
+  "scripts": {
+    "test": "node respawn date",
+    "dist": "npm run lint:fix && npm run dist:pkg && npm run dist:zip",
+    "dist:pkg": "pkg package.json --out-path dist --targets node8-macos-x64,node8-win-x64,node8-win-x86,node8-linux-x64,node8-linux-x86",
+    "dist:zip": "zip -j dist/respawn-macos-x64.zip dist/respawn-macos-x64 && zip -j dist/respawn-win-x64.zip dist/respawn-win-x64.exe && zip -j dist/respawn-win-x86.zip dist/respawn-win-x86.exe && zip -j dist/respawn-linux-x64.zip dist/respawn-linux-x64 && zip -j dist/respawn-linux-x86.zip dist/respawn-linux-x86",
+    "lint": "standard --verbose",
+    "lint:fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinGodell/respawn.git"
+  },
+  "keywords": [
+    "spawn",
+    "respawn"
+  ],
+  "author": "Kevin Godell <kevin.godell@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinGodell/respawn/issues"
+  },
+  "homepage": "https://github.com/kevinGodell/respawn#readme",
+  "devDependencies": {
+    "pkg": "^4.3.0",
+    "standard": "^11.0.1"
+  },
+  "bin": "respawn.js"
+}
