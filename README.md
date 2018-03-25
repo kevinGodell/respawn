@@ -1,5 +1,7 @@
 # respawn
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kevinGodell/respawn.svg)](https://greenkeeper.io/)
+
 **respawn** is a simple command line app that launches a child process and automatically re-spawns it if it exits.
 Nodejs is packaged inside the app and does not need to be installed separately.
 No fancy interface, commands, or logging.
