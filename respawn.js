@@ -2,9 +2,11 @@
 
 const {spawn} = require('child_process')
 
-const childProcessPath = process.argv[2]
+const [, , ...args] = process.argv
 
-const childProcessParams = process.argv.slice(3)
+const childProcessPath = args[0]
+
+const childProcessParams = args.slice(1)
 
 console.log(`child process path: ${childProcessPath}`)
 
