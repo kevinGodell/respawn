@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/kevinGodell/respawn#readme",
   "devDependencies": {
-    "pkg": "^4.3.0",
+    "pkg": "^4.3.7",
     "standard": "^11.0.1"
   },
   "bin": "respawn.js"
